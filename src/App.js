@@ -1,25 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import styled from "styled-components";
+
+const Father = styled.div`
+    display: flex;
+`;
+const Box = styled.div.attrs({ onMouseOver: Father })`
+    background-color: ${(props) => props.bgColor};
+    width: 100px;
+    height: 100px;
+`;
+
+const Circle = styled(Box)`
+    border-radius: 50px;
+`;
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <Father>
+            <Box bgColor="teal"></Box>
+            <Box as="a" href="/">
+                Hello
+            </Box>
+            <Circle bgColor="whitesmoke"></Circle>
+        </Father>
+    );
 }
 
 export default App;
