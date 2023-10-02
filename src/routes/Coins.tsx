@@ -76,13 +76,13 @@ function Coins() {
     return (
         <Container>
             <Header>
-                <Title>코인</Title>
+                <Title>Crypto</Title>
             </Header>
             {isLoading ? (
                 <Loader>Loading...</Loader>
             ) : (
                 <CoinList>
-                    {data?.slice(0, 100).map((coin) => (
+                    {data?.slice(0, 10).map((coin) => (
                         <Coin key={coin.id}>
                             <Link
                                 to={{

@@ -1,5 +1,5 @@
 const BASE_URL = `https://api.coinpaprika.com/v1`;
-
+// https://ohlcv-api.nomadcoders.workers.dev/?coinId=btc-bitcoin
 export function fetchCoins() {
     return fetch(`${BASE_URL}/coins`).then((response) => response.json());
 }

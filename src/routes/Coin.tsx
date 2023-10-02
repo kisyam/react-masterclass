@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { useQuery } from "@tanstack/react-query";
-
 import {
     Link,
     Route,
@@ -176,6 +175,7 @@ function Coin() {
     return (
         <Container>
             <Header>
+                <Link to={`/`}>Back</Link>
                 <Title>
                     {state?.name
                         ? state.name
